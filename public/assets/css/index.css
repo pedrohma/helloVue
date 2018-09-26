@@ -4,11 +4,27 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #4a4630;
+    background-color: #fbf3c6;
+}
+
+ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #4a4630;
+}
+
+ul li:last-child {
+    border-bottom: none
 }
 
 .title{
     font-size: 25pt;
-    text-align: center;
 }
 
 .component{
@@ -16,4 +32,33 @@ html, body {
     margin-bottom: 50px;
 }
 
+.border{
+    border-style: solid;
+    border-color: black;
+    background-color: bisque;
+}
 
+input[type=text]{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    background-color: #fbf3c6;
+}
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+h3{
+    color: #cc5454;
+}

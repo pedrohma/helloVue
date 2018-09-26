@@ -1,15 +1,47 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="assets/css/index.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <title>Hello Vue!</title>
-    </head>
-    <body>
-        
-        <div class="title component" id="app">
-            {{ message }}
-        </div>
-        
-        <script src="assets/js/index.js"></script>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Hello Vue!</title>
+</head>
+
+<body>
+
+    <div class="title component" id="app">
+        {{ message }}
+    </div>
+
+    <div class="component border" id="app-2">
+        <p v-bind:title="message">
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </p>
+    </div>
+
+    <div class="component border" id="app-3">
+        <p v-if="seen">Now you see me</p>
+    </div>
+
+    <div class="component border" id="app-4">
+
+        <h3>Market List</h3>
+
+        <ul>
+            <li v-for="item in items">
+                {{ item.text }}
+            </li>
+        </ul>
+        <br />
+
+        <input type="text" v-model="item" placeholder="Milk, Egg, Avocado..">
+        <button v-on:click="addList">Add to List</button>
+
+    </div>
+
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+
 </html>
