@@ -1,0 +1,26 @@
+{
+  "name": "hellovue",
+  "version": "1.0.0",
+  "description": "Exploring Vue",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohma95/helloVue.git"
+  },
+  "keywords": [
+    "vue.js"
+  ],
+  "author": "Pedro Henrique de Miranda Arthur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrohma95/helloVue/issues"
+  },
+  "homepage": "https://github.com/pedrohma95/helloVue#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
