@@ -7,6 +7,6 @@ const server = require('http').Server(app);
 
 var port = process.env.PORT || 8081;
 
-var listener = server.listen(port, function (){
+server.listen(port, function (){
     console.log("RMM is running on port " + port);
 });

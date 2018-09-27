@@ -36,10 +36,22 @@
 
         <input type="text" v-model="item" placeholder="Milk, Egg, Avocado..">
         <button v-on:click="addList">Add to List</button>
-
     </div>
 
+    <div class="component border" id="app-7">
 
+        <h3>Grocery List</h3>
+
+        <ul>
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+            </todo-item>
+        </ul>
+    </div>
+
+    <div class="component" id="year">
+        <p><a href="https://pedrohma95.github.io/">Pedro Henrique de Miranda Arthur</a></p>
+        <p>{{year}}</p>
+    </div>
 
     <script src="assets/js/index.js"></script>
 </body>
