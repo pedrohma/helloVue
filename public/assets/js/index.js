@@ -55,9 +55,4 @@ var app7 = new Vue({
     }
 })
 
-var year = new Vue({
-    el: '#year',
-    data: {
-        year: new Date().getFullYear()
-    }
-})
+

@@ -24,28 +24,29 @@
     </div>
 
     <div class="component border" id="app-4">
-
         <h3>Market List</h3>
-
         <ul>
             <li v-for="item in items">
                 {{ item.text }}
             </li>
         </ul>
         <br />
-
         <input type="text" v-model="item" placeholder="Milk, Egg, Avocado..">
         <button v-on:click="addList">Add to List</button>
     </div>
 
     <div class="component border" id="app-7">
-
         <h3>Grocery List</h3>
-
         <ul>
             <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
             </todo-item>
         </ul>
+    </div>
+
+    <div class="border" id="links">
+        <div v-for="app in apps">
+            <p> <a :href="app.link">{{ app.name }}</a></p>
+        </div>
     </div>
 
     <div class="component" id="year">
@@ -54,6 +55,7 @@
     </div>
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/page.js"></script>
 </body>
 
 </html>

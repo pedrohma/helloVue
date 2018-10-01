@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/dice.css">
+    <link rel="stylesheet" href="assets/css/dice-1.0.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Dice Rolling</title>
+</head>
+
+<body>
+
+    <div class="component" id="diceValue">
+        <span style="font-size: 16em;" :class="'dice dice-' + value"></span>
+        <br />
+        <br />
+        <button class="rollBtn" v-on:click="roll">Roll</button>
+    </div>
+
+    <div class="border" id="links">
+        <div v-for="app in apps">
+            <p> <a :href="app.link">{{ app.name }}</a></p>
+        </div>
+    </div>
+
+    <div class="component" id="year">
+        <p><a href="https://pedrohma95.github.io/">Pedro Henrique de Miranda Arthur</a></p>
+        <p>{{year}}</p>
+    </div>
+
+    <script src="assets/js/dicerolling.js"></script>
+    <script src="assets/js/page.js"></script>
+</body>
+
+</html>
