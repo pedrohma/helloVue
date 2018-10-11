@@ -1,0 +1,13 @@
+p span{
+    font-weight: bold;
+    color: #a4c7a5;
+}
+
+.error{
+    color: #b30011;
+    font-weight: bold;
+}
+
+.fa-bitcoin{
+    color: #92b193;
+}

@@ -10,7 +10,8 @@ var links = new Vue({
     data: {
         apps: [
             {name: 'Main Page', link: 'index.html'},
-            {name: 'Dice Rolling', link: 'dicerolling.html'}
+            {name: 'Dice Rolling', link: 'dicerolling.html'},
+            {name: 'Bit Coin Price', link: 'bitCoin.html'}
         ]
     }
 })

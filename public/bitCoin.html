@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/bitCoin.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Bit Coin Price</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1><i class="fab fa-bitcoin"></i> Bit Coin Price <i class="fab fa-bitcoin"></i></h1>
+
+        <section v-if="errored">
+            <p class="error">We're sorry, we're not able to retrieve this information at the moment, please try back
+                later... </p>
+        </section>
+
+        <section v-else>
+            <div v-if="loading">Loading...</div>
+
+            <div v-else class="currency">
+                <div>
+                    <p>{{info.disclaimer }} on {{info.time.updated}}</p>
+                </div>
+                <div v-for="currency in info.bpi">
+                    <p class="value">{{ currency.description }}:
+                        <span class="lighten">
+                            <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="border" id="links">
+        <div v-for="app in apps">
+            <p> <a :href="app.link">{{ app.name }}</a></p>
+        </div>
+    </div>
+
+    <div class="component" id="year">
+        <p><a href="https://pedrohma95.github.io/">Pedro Henrique de Miranda Arthur</a></p>
+        <p>{{year}}</p>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/bitCoin.js"></script>
+    <script src="assets/js/page.js"></script>
+</body>
+
+</html>
